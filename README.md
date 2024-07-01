@@ -48,8 +48,7 @@ After your credit is over, we’ll ask you if you want to continue with pay-as-y
 
 
 
-
-
+![Screenshot 2024-06-15 at 2 52 06 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/91de71c8-6e02-4504-883b-c717097eebda)
 
 
 
@@ -84,12 +83,15 @@ o Deploy the VM, ensuring it’s accessible from the internet.
 
 
 
+![Screenshot 2024-06-09 at 7 34 43 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/465077cc-e899-415e-b1b0-d67bab093032)
 
 
 
+![Screenshot 2024-06-09 at 7 36 26 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/f52a8d07-4ea6-40fb-855c-25b885902cfb)
 
 
 
+![Screenshot 2024-06-09 at 7 39 45 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/5f87787b-3c51-4a18-bdc0-22d3ad9bacf2)
 
 
 
@@ -122,7 +124,11 @@ o This allows recording of login attempts.
 o Create a log analytics workspace (e.g., “honeypot-logs”).
 o Enable data collection from the VM into this workspace.
 
+![Screenshot 2024-06-09 at 7 46 33 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/d2379d51-5046-4c33-a418-7187f075325d)
 
+
+
+![Screenshot 2024-06-09 at 7 46 15 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/1e8aee73-4859-4ff0-b0d6-53d2586d319f)
 
 
 
@@ -151,6 +157,7 @@ Select Review + create
 
 
 
+![Screenshot 2024-06-09 at 7 47 20 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/1835c084-4fc8-44a0-8c56-0549e02ca4a5)
 
 
 
@@ -169,6 +176,7 @@ Select Review + create
 
 
 
+![Screenshot 2024-06-09 at 7 49 12 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/dbda55b0-d00f-431c-8986-fc545b289a7a)
 
 
 
@@ -183,10 +191,12 @@ It should look like this once it’s being deployed
 
 
 
+![Screenshot 2024-06-09 at 7 49 46 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/b9726f7e-2ee7-461a-bc08-27a225b86c52)
 
 
 
 
+![Screenshot 2024-06-09 at 7 49 46 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/9373762a-b9e5-429c-8b34-5953a83dea27)
 
 
 
@@ -206,6 +216,9 @@ Make an account with Free IP Geolocation API and Accurate IP Lookup Database
 This account is free for 1000 API calls per day. Paying 15.00$ will allow 150,000 API calls per month.
 
 
+<img width="827" alt="apikeyfromipgeolo" src="https://github.com/tw181802/Cyber-Course/assets/106920505/7cc3ca59-34ef-4663-bdc1-3434352f899d">
+
+
 
 
 
@@ -215,6 +228,9 @@ Set up Edge without signing in
 Copy Powershell script into VM's Powershell (Written by Josh Madakor)
 Select New Script in Powershell ISE and paste script
 Save to Desktop and give it a name (Log_Exporter)
+
+
+<img width="772" alt="splitpanes" src="https://github.com/tw181802/Cyber-Course/assets/106920505/227126c8-f703-4036-9e3c-ec0a5c855901">
 
 
 
@@ -264,6 +280,11 @@ Scroll down to "Environment settings" > subscription name > log analytics worksp
 
 
 
+![Screenshot 2024-06-09 at 7 55 36 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/8515904b-06ce-44e0-a876-d59cbee0060e)
+
+
+
+
 
 
 
@@ -278,6 +299,7 @@ Hit Save
 
 
 
+![Screenshot 2024-06-09 at 7 56 26 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/77a63d40-9c93-43bb-bd38-0234b53511c4)
 
 
 
@@ -295,6 +317,7 @@ Click Connect
 
 
 
+![Screenshot 2024-06-09 at 7 57 55 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/a6f8089d-38f2-4402-8d01-68f6b31a28c2)
 
 
 
@@ -321,9 +344,11 @@ Click Add
 
 
 
+![Screenshot 2024-06-09 at 7 59 53 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/a9e9fd04-6e63-47d4-85ae-7c29930ffea8)
 
 
 
+![Screenshot 2024-06-09 at 8 01 42 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/58ae1ab7-e800-4b9f-bd87-ed082ca734c5)
 
 
 
@@ -333,10 +358,11 @@ I’m remoting into the PC w/ the IP address above
 
 
 
+<img width="897" alt="vmlogin" src="https://github.com/tw181802/Cyber-Course/assets/106920505/d1b5f623-941a-4239-9b84-3fd5dd2d5a69">
 
 
 
-
+<img width="932" alt="eventlogandefenderoff" src="https://github.com/tw181802/Cyber-Course/assets/106920505/b32d3cc3-e568-4552-9569-11313aa06949">
 
 
 
@@ -346,6 +372,7 @@ I’m remoting into the PC w/ the IP address above
 
 I can’t ping the PC by IP address b/c the Firewall is enabled ( as you can see “Request timeout”)
 
+![Screenshot 2024-06-13 at 7 43 49 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/d03fd311-31af-492a-98bb-a359e575658f)
 
 
 
@@ -366,22 +393,28 @@ Ping VM via Host's command line to make sure it is reachable ping -t <VM IP>
 
 
 
+<img width="580" alt="firealloff" src="https://github.com/tw181802/Cyber-Course/assets/106920505/c1c1cd9a-d48f-4885-962f-5b9eeaef0351">
+
+
 
 
 
 Now I can ping the PC w/ the IP Address
 
+![Screenshot 2024-06-09 at 8 11 15 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/8aacfc1c-57b0-4977-a361-67b36b2c20d3)
 
 
 
 Query the logs now
 
 
+![Screenshot 2024-06-09 at 9 11 04 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/fe468ed8-2661-430d-b760-0db03e9b4d92)
 
 
 Go to Tables to see the logs created
 
 
+![Screenshot 2024-06-09 at 9 20 24 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/fe1289d7-74bc-4df5-852f-836b083828b0)
 
 
 
@@ -407,6 +440,7 @@ Hit Create
 
 
 
+![Screenshot 2024-06-09 at 9 26 12 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/aab95bef-5b7f-4025-b715-e6a43ecbe805)
 
 
 
@@ -427,6 +461,7 @@ May take some time for Azure to sync VM and Log Analytics (NEW CHANGES) use this
 | project Latitude, Longitude, DestinationHost, Sourcehost, Country, Label, event_count)
 
 
+![Screenshot 2024-06-11 at 6 18 51 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/30c61c36-648e-4064-899d-e4e45d35a13b)
 
 
 
@@ -434,6 +469,7 @@ May take some time for Azure to sync VM and Log Analytics (NEW CHANGES) use this
 
 Type in your log name and you’ll see ingested logs make sure to highlight the name and set the right time range
 
+![Screenshot 2024-06-11 at 6 32 02 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/f5e9a377-8ec1-4f81-8e0c-a19c326ea714)
 
 
 
@@ -441,6 +477,10 @@ To Map Data Go To:
 
 Sentinel > New Workbook 
 
+![Screenshot 2024-06-11 at 6 48 44 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/6630196c-7ce1-427b-8872-632d5cf7a7a6)
+
+
+![Screenshot 2024-06-11 at 6 54 32 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/e43497e3-251f-453c-a820-fc63f2868f59)
 
 
 
@@ -454,6 +494,7 @@ To Map Data Go To:
 
 Sentinel > New Workbook 
 
+![Screenshot 2024-06-12 at 4 35 48 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/8eb3898f-8f48-4954-b906-c45089c544af)
 
 
 
@@ -463,9 +504,13 @@ Click on Workbooks and Add workbook then click Edit
 Remove default widgets (Three dots > Remove)
 Click Add > Add query
 Copy/Paste the following query into the query window and Run Query
+
+```
 (FAILED_RDP_WITH_GEO_CL | summarize event_count=count() by sourcehost_CF, latitude_CF, longitude_CF, country_CF, label_CF, destinationhost_CF
 | where destinationhost_CF != "samplehost"
 | where sourcehost_CF != "")
+```
+
 Kusto Query Language (KQL) - Azure Monitor Logs is based on Azure Data Explorer. The language is designed to be easy to read and use with some practice writing queries and basic guidance.
 
 Once results come up click the Visualization dropdown menu and select Map
@@ -494,6 +539,7 @@ NOTE: The map will only display Event Viewer's failed RDP attempts and not all t
 You can copy the query below since Azure recently changed and no longer have the FIELD Parse option and change the beginning part to your log name ex. THIS_WILL_BE_YOUR_LOG_NAME_CL
 
 
+```
 
    (   FAILED_LOG_GEO_LC_CL
  |extend username = extract(@"username:([^,]+)", 1, RawData),
@@ -509,7 +555,7 @@ You can copy the query below since Azure recently changed and no longer have the
  |where sourcehost != ""
  |summarize event_count=count() by timestamp, label, country, state, sourcehost, username, destination, longitude, latitude)
 
-
+```
 
 
 
@@ -526,7 +572,8 @@ World map of incoming attacks after 24 hours (built custom logs including geodat
 
 You can copy this query but change FAILED_LOG_GEO_LC_CL to your individual log name
 
- ( FAILED_LOG_GEO_LC_CL
+```
+FAILED_LOG_GEO_LC_CL
  |extend username = extract(@"username:([^,]+)", 1, RawData),
          timestamp = extract(@"timestamp:([^,]+)", 1, RawData),
          latitude = extract(@"latitude:([^,]+)", 1, RawData),
@@ -538,9 +585,9 @@ You can copy this query but change FAILED_LOG_GEO_LC_CL to your individual log n
          country = extract(@"country:([^,]+)", 1, RawData)
  |where destination != "samplehost"
  |where sourcehost != ""
- |summarize event_count=count() by timestamp, label, country, state, sourcehost, username, destination, longitude, latitude )
+``` |summarize event_count=count() by timestamp, label, country, state, sourcehost, username, destination, longitude, latitude )
 
-
+```
 
 Custom Powershell script parsing data from 3rd party API (This is extracting the failed login attempts and ingesting them into the logs, Keep it running)
 
@@ -550,6 +597,7 @@ Custom Powershell script parsing data from 3rd party API (This is extracting the
 
 
 
+![Screenshot 2024-06-12 at 4 53 25 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/397c9c4f-9fa6-4220-8d69-77bdfeb103b7)
 
 
 
@@ -560,6 +608,7 @@ Search for "Resource groups" > name of resource group (honeypotlab) > Delete res
 Type the name of the resource group ("honeypotlab") to confirm deletion
 Check the Apply force delete for selected Virtual machines and Virtual machine scale sets box
 Select Delete
+![Screenshot 2024-06-12 at 4 56 45 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/300b3dfc-8a10-4b9d-b6c9-6eb379565235)
 
 
 
