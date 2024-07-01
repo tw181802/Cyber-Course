@@ -1,11 +1,11 @@
 # Cyber-Course
 ![image](https://github.com/tw181802/Cyber-Course/assets/106920505/7c14940e-979f-49c9-b113-347de5067237)
-SIEM
+### SIEM
 
-Azure
+### Azure
 SIEM & Honeypot | Microsoft Azure Sentinel Attack Map
 
-Summary
+### Summary
 SIEM (Security Information and Event Management System):
 SIEM helps organizations detect, analyze, and respond to security threats.
 It collects event log data from various sources in a network (like Firewalls, IDS/IPS, Identity solutions).
@@ -14,7 +14,7 @@ Honeypot:
 A honeypot is a security mechanism.
 It creates a virtual trap in a controlled environment to lure attackers.
 By intentionally compromising a computer system, security experts study attacker behavior, explore different threats, and enhance security policies.
-Lab Purpose:
+### Lab Purpose:
 Understand how to collect honeypot attack log data.
 Query this data using a SIEM (like Microsoft’s Azure Sentinel).
 Display it in an easy-to-understand format, such as a world map showing attack counts and geolocations.
@@ -35,12 +35,12 @@ Custom PowerShell script by Josh Madakor or Your own Personal Script
 
 
 
-Setting Up the Honeypot in Azure VM
+### Setting Up the Honeypot in Azure VM
 
 Create your Azure free account
 Login w/ Microsoft Acct and use Azure
 
-PERKS:
+### PERKS:
 Popular services free for 12 months
 55+ services always free
 $200 credit to use in your first 30 days (delete resource group when done it’ll eat up subscription cost )
@@ -66,7 +66,7 @@ Project details
 Create new resource group and name it (honeypotlab)
 A resource group is a collection of resources that share the same lifecycle, permissions, and policies.
 
-Instance details
+### Instance details
 Name your VM (Thoneypot-vm)
 Select a recommended region ((US) East US 2)
 Availability options: No infrastructure redundancy required
@@ -76,7 +76,7 @@ VM Architecture: x64
 Size: Default is okay (Standard_D2s_v3 – 2vcpus, 8 GiB memory)
 
 
-Setting Up the Honeypot in Azure VM
+### Setting Up the Honeypot in Azure VM
 1. Create a Azure Account and Deploy Virtual Machine (VM):
 o Set up a VM that will act as the honeypot and expose it to the internet.
 o Configure the instance details, including networking settings.
@@ -105,11 +105,11 @@ o Deploy the VM, ensuring it’s accessible from the internet.
 
 
 
-Administrator account
+### Administrator account
 Create a username and password for virtual machine
 IMPORTANT NOTE: These credentials will be used to log into the virtual machine (Keep them handy)
 
-Inbound port rules
+### Inbound port rules
 Public inbound ports: Allow RDP (3389)
 
 
@@ -137,7 +137,7 @@ o Enable data collection from the VM into this workspace.
 
 
 
-Disks
+### Disks
 Leave all defaults
 Select Next : Networking >
 Networking
@@ -145,7 +145,7 @@ Network interface
 NIC network security group: Advanced > Create new
 A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, the virtual machine. In other words, security rules management.
 
-Remove Inbound rules (1000: default-allow-rdp) by clicking three dots
+### Remove Inbound rules (1000: default-allow-rdp) by clicking three dots
 Add an inbound rule
 Destination port ranges: * (wildcard for anything)
 Protocol: Any
@@ -164,7 +164,7 @@ Select Review + create
 
 
 
-Create a Log Analytics Workspace
+### Create a Log Analytics Workspace
 Search for "Log analytics workspaces"
 Select Create Log Analytics workspace
 Put it in the same resource group as VM (honeypotlab)
@@ -208,9 +208,9 @@ It should look like this once it’s being deployed
 
 
 
-Get API key from Geolocation 
+### Get API key from Geolocation 
 
-Copy API key once logged in and paste into script line 2:($API_KEY = "<API key>"
+Copy API key once logged in and paste into script line 2: ( ```$API_KEY = "<API key>" ```
 Hit Save
 Run the PowerShell ISE script (Green play button) in the virtual machine to continuously produce log data
 Make an account with Free IP Geolocation API and Accurate IP Lookup Database
@@ -223,7 +223,7 @@ This account is free for 1000 API calls per day. Paying 15.00$ will allow 150,00
 
 
 
-Scripting the Security Log Exporter
+### Scripting the Security Log Exporter
 In VM open Powershell ISE
 Set up Edge without signing in
 Copy Powershell script into VM's Powershell (Written by Josh Madakor)
@@ -240,41 +240,42 @@ Save to Desktop and give it a name (Log_Exporter)
 Alternatively you can create your own script following these steps (OPTIONAL):
 .Collecting Failed Login Attempts with PowerShell
 
-Create/Use a PowerShell Script to Parse Logs:
-o Open PowerShell ISE or any text editor.(link here for script)
-o Write a script that queries the Security event log for failed login attempts.
-o Extract relevant information such as account names and IP addresses.
-o Here’s a sample script:
-2. ($events = Get-WinEvent -LogName Security | Where-Object { $_.Id -eq
+### Create/Use a PowerShell Script to Parse Logs:
+- Open PowerShell ISE or any text editor.(link here for script)
+- Write a script that queries the Security event log for failed login attempts.
+- Extract relevant information such as account names and IP addresses.
+- Here’s a sample script:
+```
+$events = Get-WinEvent -LogName Security | Where-Object { $_.Id -eq
 4625 }
-3. foreach ($event in $events) {
-4. $time = $event.TimeCreated
-5. $account = $event.Properties[5].Value
-6. $ipAddress = $event.Properties[19].Value
-7. Write-Host &quot;Failed login attempt at $time from account $account
-(IP: $ipAddress)&quot;
-8. } )
-9. Schedule Script Execution:
-o Save the script as a .ps1 file.
-o Schedule it to run periodically (e.g., every hour) using Task Scheduler.
-o The script will collect data on failed login attempts.
-10. Analyze the Data:
-o Use the collected information to identify patterns.
-o Map IP addresses geospatially to locate potential adversaries.
+foreach ($event in $events) {
+$time = $event.TimeCreated
+$account = $event.Properties[5].Value
+$ipAddress = $event.Properties[19].Value
+Write-Host &quot;Failed login attempt at $time from account $account
+(IP: $ipAddress)&quot; 
+ } 
+```
+Schedule Script Execution:
+Save the script as a .ps1 file.
+Schedule it to run periodically (e.g., every hour) using Task Scheduler.
+The script will collect data on failed login attempts.
+Analyze the Data:
+Use the collected information to identify patterns.
+Map IP addresses geospatially to locate potential adversaries.
 Correlate login attempts with other security events.
- Copy and paste key (with your API key
-from ipgeolocation.io).
-o Run the script to collect real data on login attempts.
+Copy and paste key (with your API key from ipgeolocation.io).
+Run the script to collect real data on login attempts.
 View Login Attempts:
-o In Event Viewer, under Windows Log, check the Security section.
-o You’ll see login attempts from various locations.
+In Event Viewer, under Windows Log, check the Security section.
+oou’ll see login attempts from various locations.
 
 
 
 
 
 
-Configure Microsoft Defender for Cloud
+### Configure Microsoft Defender for Cloud
 Search for "Microsoft Defender for Cloud"
 Scroll down to "Environment settings" > subscription name > log analytics workspace name (log-honeypot)
 
@@ -310,7 +311,7 @@ Hit Save
 
 
 
-Connect Log Analytics Workspace to Virtual Machine
+### Connect Log Analytics Workspace to Virtual Machine
 Search for "Log Analytics workspaces"
 Select workspace name (log-honeypot) > "Virtual machines" > virtual machine name (honeypot-vm)
 Click Connect
@@ -329,7 +330,7 @@ Click Connect
 
 
 
-Connect VM to Microsoft Sentinel:
+### Connect VM to Microsoft Sentinel:
 o Search for “Microsoft Sentinel” and create a new instance.
 o Select the log analytics workspace you created.
 o The VM should now be connected
@@ -337,7 +338,7 @@ o The VM should now be connected
 
 
 
-Configure Microsoft Sentinel
+### Configure Microsoft Sentinel
 Search for "Microsoft Sentinel"
 Click Create Microsoft Sentinel
 Select Log Analytics workspace name (honeypot-log)
@@ -380,7 +381,7 @@ I can’t ping the PC by IP address b/c the Firewall is enabled ( as you can see
 
 *****I just disabled the Firewall
 
-Disable the Firewall in Virtual Machine
+### Disable the Firewall in Virtual Machine
 Go to Virtual Machines and find the honeypot VM (honeypot-vm)
 By clicking on the VM copy the IP address
 Log into the VM via Remote Desktop Protocol (RDP) with credentials from step 2
@@ -420,7 +421,7 @@ Go to Tables to see the logs created
 
 
 
-Create Custom Log in Log Analytics Workspace
+### Create Custom Log in Log Analytics Workspace
 Create a custom log to import the additional data from the IP Geolocation service into Azure Sentinel
 Search "Run" in VM and type "C:\ProgramData"
 Open file named "failed_rdp" hit CTRL + A to select all and CTRL + C to copy selection
@@ -468,13 +469,13 @@ May take some time for Azure to sync VM and Log Analytics (NEW CHANGES) use this
 
 
 
-Type in your log name and you’ll see ingested logs make sure to highlight the name and set the right time range
+### Type in your log name and you’ll see ingested logs make sure to highlight the name and set the right time range
 
 ![Screenshot 2024-06-11 at 6 32 02 PM](https://github.com/tw181802/Cyber-Course/assets/106920505/f5e9a377-8ec1-4f81-8e0c-a19c326ea714)
 
 
 
-To Map Data Go To:
+### To Map Data Go To:
 
 Sentinel > New Workbook 
 
@@ -499,7 +500,7 @@ Sentinel > New Workbook
 
 
 
-Map Data in Microsoft Sentinel
+### Map Data in Microsoft Sentinel
 Go to Microsoft Sentinel to see the Overview page and available events
 Click on Workbooks and Add workbook then click Edit
 Remove default widgets (Three dots > Remove)
@@ -512,7 +513,7 @@ Copy/Paste the following query into the query window and Run Query
 | where sourcehost_CF != "")
 ```
 
-Kusto Query Language (KQL) - Azure Monitor Logs is based on Azure Data Explorer. The language is designed to be easy to read and use with some practice writing queries and basic guidance.
+### Kusto Query Language (KQL) - Azure Monitor Logs is based on Azure Data Explorer. The language is designed to be easy to read and use with some practice writing queries and basic guidance.
 
 Once results come up click the Visualization dropdown menu and select Map
 Select Map Settings for additional configuration
@@ -567,7 +568,7 @@ You can copy the query below since Azure recently changed and no longer have the
 
 
 
-World map of incoming attacks after 24 hours (built custom logs including geodata)
+### World map of incoming attacks after 24 hours (built custom logs including geodata)
 
 
 
@@ -602,8 +603,8 @@ Custom Powershell script parsing data from 3rd party API (This is extracting the
 
 
 
-Lastly: Deprovision Resources
-VERY IMPORTANT - Do NOT skip!
+### Lastly: Deprovision Resources
+### VERY IMPORTANT - Do NOT skip!
 
 Search for "Resource groups" > name of resource group (honeypotlab) > Delete resource group
 Type the name of the resource group ("honeypotlab") to confirm deletion
