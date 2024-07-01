@@ -57,8 +57,8 @@ After your credit is over, we’ll ask you if you want to continue with pay-as-y
 
 
 
-Go to your Portal and (Virtual Machines)
-Go to portal.azure.com
+### Go to your Portal and (Virtual Machines)
+Go to `portal.azure.com`
 Search for "virtual machines"
 
 Create a virtual machine and I named mines Thoneypot-vm and create a resource group and configured it with Windows 10
@@ -67,20 +67,20 @@ Create new resource group and name it (honeypotlab)
 A resource group is a collection of resources that share the same lifecycle, permissions, and policies.
 
 ### Instance details
-Name your VM (Thoneypot-vm)
-Select a recommended region ((US) East US 2)
-Availability options: No infrastructure redundancy required
-Security type: Standard
-Image: Windows 10 Pro, version 21H2 - x62 Gen2
-VM Architecture: x64
-Size: Default is okay (Standard_D2s_v3 – 2vcpus, 8 GiB memory)
+- Name your VM (Thoneypot-vm)
+- Select a recommended region ((US) East US 2)
+- Availability options: No infrastructure redundancy required
+- Security type: Standard
+- Image: Windows 10 Pro, version 21H2 - x62 Gen2
+- VM Architecture: x64
+- Size: Default is okay (Standard_D2s_v3 – 2vcpus, 8 GiB memory)
 
 
 ### Setting Up the Honeypot in Azure VM
 1. Create a Azure Account and Deploy Virtual Machine (VM):
-o Set up a VM that will act as the honeypot and expose it to the internet.
-o Configure the instance details, including networking settings.
-o Deploy the VM, ensuring it’s accessible from the internet.
+2. Set up a VM that will act as the honeypot and expose it to the internet.
+3. Configure the instance details, including networking settings.
+4. Deploy the VM, ensuring it’s accessible from the internet.
 
 
 
