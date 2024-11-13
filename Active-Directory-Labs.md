@@ -257,7 +257,7 @@ This guide outlines the steps to set up Windows Server on VMware, configure Acti
 
 
 2. **Monitor Alerts in Sentinel**  
-   - In Microsoft Sentinel you can see the logs and then, click on **Defender for Endpoint** under **Security.Microsoft.com** to view and investigate alerts.
+   - In Microsoft Sentinel you can see the logs and then, click on **Defender for Endpoint** under **Security.Microsoft.com** to view and investigate alerts. We can isolate the device in Defender.
 ![IMG_1300](https://github.com/user-attachments/assets/ed18c78e-235a-4348-ac4b-64c844c05b14)
 ![IMG_1314](https://github.com/user-attachments/assets/e28962d0-d06b-4da9-8f6f-c17dfa58c103)
 ![IMG_1313](https://github.com/user-attachments/assets/374ca270-9463-4d5d-9cc0-a10ba4ed67cd)
@@ -292,5 +292,18 @@ This guide outlines the steps to set up Windows Server on VMware, configure Acti
 ![IMG_1271](https://github.com/user-attachments/assets/1cf97e20-7ae7-494b-8506-60f29394a76c)
 ![IMG_1270](https://github.com/user-attachments/assets/764fafeb-f732-4ebd-a653-a62c7a7c6c42)
 ![IMG_1269](https://github.com/user-attachments/assets/e5f63488-a377-4d2a-b9e0-abb13d6fe213)
+![IMG_1279](https://github.com/user-attachments/assets/53290db2-137c-4269-9d23-85f3b2a6c06e)
+
+
+### Also can create users with a script
+
+![script](https://github.com/user-attachments/assets/e77263f6-dde7-4642-9525-eb91f7dc61f0)
+
+### Groups
+![IMG_1276](https://github.com/user-attachments/assets/e9b87b6c-a2de-4ea6-bffa-6e9273f30347)
+![IMG_1286](https://github.com/user-attachments/assets/ca6f24e6-1126-4b05-bc67-2a516894473b)
+![IMG_1287](https://github.com/user-attachments/assets/6f3dbae7-41a0-43b2-a8b2-5732626b335d)
+
+![IMG_1277](https://github.com/user-attachments/assets/6b1a3258-78e4-40e9-84e7-ec4274c76164)
 
 
