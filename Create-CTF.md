@@ -16,7 +16,7 @@ This guide introduces the fundamentals of Docker and walks you through deploying
 ### Drawbacks of Docker
 - **Container Management**: Managing multiple containers in a large-scale environment can become complex and challenging.
 
----
+
 
 ## Deploying an App with Docker (Web App Pentest Example)
 
