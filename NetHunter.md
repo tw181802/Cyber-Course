@@ -125,16 +125,15 @@ In the Termux terminal, run the following command to update the package list:
 
 `nethunter kex &`
 ### 7. Troubleshooting
-### If you encounter issues, such as problems with child process restrictions, you may need to disable certain security features or tweak your Termux configuration.
-
-### Afterwards 
-### Go to settings.
-### Scroll down to About phone and press on it.
-### Press on Software information.
-### Tap Build number 7 times to enable developer mode.
-### Press back twice. 
-### Press on Developer options.(stop kali gui from being torn down) make note of port number 
-### Enable USB debugging
+- If you encounter issues, such as problems with child process restrictions, you may need to disable certain security features or tweak your Termux configuration.
+Afterwards 
+- Go to settings.
+- Scroll down to About phone and press on it.
+- Press on Software information.
+- Tap Build number 7 times to enable developer mode.
+- Press back twice. 
+- Press on Developer options.(stop kali gui from being torn down) make note of port number 
+- Enable USB debugging
 
 ![IMG_1161](https://github.com/user-attachments/assets/64349fb6-9861-4e18-a5aa-4933ee8c2449)
 
