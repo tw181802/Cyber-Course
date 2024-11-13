@@ -170,6 +170,9 @@ This guide outlines the steps to set up Windows Server on VMware, configure Acti
 
 3. **Software Settings**  
    - Navigate to **Software Settings** under the policy editor to configure software deployment settings.
+![IMG_1296](https://github.com/user-attachments/assets/526b4598-951d-4a57-b1b4-7debda34a49c)
+
+![IMG_1298](https://github.com/user-attachments/assets/405fbf97-5f92-40ca-9dfd-4c1db038798d)
 
 ## 7. Configuring DHCP
 
@@ -182,6 +185,7 @@ This guide outlines the steps to set up Windows Server on VMware, configure Acti
    
 2. **Add DHCP Reservations**  
    - Go to **Scope > Add Reservation**, and select both DHCP and BOOTP, entering both IP and MAC addresses.
+![IMG_1289](https://github.com/user-attachments/assets/48f48b36-1c9c-478d-bbf5-2a7703fa6a60)
 
 3. **Private IP Addresses**  
    - DHCP can also assign private IP addresses like **169.254.X.X** for internal use.
@@ -190,12 +194,19 @@ This guide outlines the steps to set up Windows Server on VMware, configure Acti
 
 1. **Update Mail Hosts File for DNS**  
    - Update the mail server records in the `hosts` file to ensure proper DNS resolution for email services.
+![IMG_1290](https://github.com/user-attachments/assets/6cb950db-e2a1-4ca8-96da-9cea28d1e489)
+![IMG_1291](https://github.com/user-attachments/assets/18929d16-4829-40f5-ad75-1631f8111402)
 
 ## 9. Monitoring Server Logs in Event Viewer
 
 1. **View Server Logs**  
    - Open **Event Viewer** to view application, security, and system logs.
    - Use filters to analyze specific logs, especially **Security Logs** for auditing purposes.
+![IMG_1294](https://github.com/user-attachments/assets/a3573ccd-ca5e-4121-b077-402fbe8427c9)
+
+![IMG_1295](https://github.com/user-attachments/assets/e7b3b76b-1a76-46a1-b16b-8c89fd1aa391)
+
+![IMG_1299](https://github.com/user-attachments/assets/258fbb53-e58a-469f-91b0-acd1f914978f)
 
 2. **Filtering in Azure**  
    - Use Azure to filter and view specific logs and events related to network security or server performance.
@@ -206,6 +217,9 @@ This guide outlines the steps to set up Windows Server on VMware, configure Acti
    - **Account Locked**: Unlock accounts through Active Directory.
    - **Password Expired**: Reset passwords for users as needed.
    - **Two-Factor Authentication (2FA)**: Address issues related to Duo, RSA, or Google Authenticator.
+
+![IMG_1302](https://github.com/user-attachments/assets/48158d3a-4236-4fef-928a-acf8af58688a)
+
 
 2. **Wi-Fi Issues**  
    - Ensure the **Von profile** is correctly set up on the C drive.
@@ -243,7 +257,11 @@ This guide outlines the steps to set up Windows Server on VMware, configure Acti
 
 
 2. **Monitor Alerts in Sentinel**  
-   - In Microsoft Sentinel, click on **Defender for Endpoint** under **Security.Microsoft.com** to view and investigate alerts.
+   - In Microsoft Sentinel you can see the logs and then, click on **Defender for Endpoint** under **Security.Microsoft.com** to view and investigate alerts.
+![IMG_1300](https://github.com/user-attachments/assets/ed18c78e-235a-4348-ac4b-64c844c05b14)
+![IMG_1314](https://github.com/user-attachments/assets/e28962d0-d06b-4da9-8f6f-c17dfa58c103)
+![IMG_1313](https://github.com/user-attachments/assets/374ca270-9463-4d5d-9cc0-a10ba4ed67cd)
+
 ![IMG_1303](https://github.com/user-attachments/assets/5d36a909-78e8-406d-8e49-96e97f1ee1dc)
 ![IMG_1304](https://github.com/user-attachments/assets/110c4ab2-d9b2-4a7d-bfab-0763e403dccb)
 
